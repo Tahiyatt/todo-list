@@ -35,12 +35,33 @@ submitBtn.addEventListener("click", (event)=>{
 
     taskDate.textContent =parsedDate;
 
+    const deleteButton = document.createElement("button");
+    deleteButton.classList.add("delete-btn");
+    const deleteIcon = document.createElement("i");
+    deleteIcon.classList.add("fa", "fa-trash");
+
+    deleteButton.append(deleteIcon);
+
     list.append(bulletPoint);
     bulletPoint.append(checkBox);
     bulletPoint.append(taskInfo);
     bulletPoint.append(taskDate);
+    bulletPoint.append(deleteButton)
     
         
     console.log("Task Info:" + task_info_input.value);
     console.log("Task Date:" + task_date_input.value);
 })
+
+
+
+
+const list = document.querySelector("#list");
+
+list.addEventListener("click", (event) => {
+    const deleteBtn = event.target.closest(".delete-btn");
+
+    if (!deleteBtn) return;
+
+    deleteBtn.parentElement.remove();
+});
