@@ -1,0 +1,75 @@
+<html>
+    <head lang="en">
+        <title>To-Do List</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="PersonT">
+        <link rel="stylesheet" href="styles.css">
+
+
+
+    </head>
+    <body>
+        
+        <h1>To-Do List</h1>
+        <div class="outer-container">
+        
+        <h2>Tasks</h2>
+        
+        <form id="input-form" action="./script.js">
+
+            <label for="task-input">Add Task
+                <input type="text" id="task-input" placeholder="Enter Task Here">
+            </label>
+            <label for="input-task-date">Complete By:
+                <input type="date" id="input-task-date">
+            </label>
+            <button type="submit" id="add-task" method="POST">Enter Task!</button>
+        </form>
+        <div class="list-container">
+
+            <ul id="list">
+                <li>
+                    <input type="checkbox">
+                    <span class="task-name">Study React</span>
+                    <span class="task-date">06-15-2026</span>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <span class="task-name">Finish Project</span>
+                    <span class="task-date">06-20-2026</span>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <span class="task-name">Buy Groceries</span>
+                    <span class="task-date">06-22-2026</span>
+                </li>
+
+                <li>
+                    <input type="checkbox">
+                    <span class="task-name">End World Hunger</span>
+                    <span class="task-date">06-25-2026</span>
+                </li>
+            </ul>
+
+        
+
+            
+
+
+        </div>
+
+        </div>
+
+
+        <script src="script.js"></script>
+    </body>
+
+
+
+
+
+
+
+
+
+</html>
